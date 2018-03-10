@@ -9,7 +9,7 @@ def sort_chr(string):
     return sorted(string, key=str.lower)
 
 if __name__ == "__main__":
-    s = "isShorYouNeedPython"
+    s = "LifeisShorYouNeedPython"
     print(s)
     r = sort_chr(s)
     print(r)

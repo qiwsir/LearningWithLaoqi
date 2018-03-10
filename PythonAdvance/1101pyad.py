@@ -11,6 +11,6 @@ class RoundFloat2:
     __repr__ = __str__
 
 if __name__ == "__main__":
-    r = RoundFloat2(3.1415926)
+    r = RoundFloat2(3.1)
     print(r)
     print(type(r))
