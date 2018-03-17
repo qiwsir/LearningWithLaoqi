@@ -5,7 +5,6 @@ class Keeper:
         self.keep = set(map(ord, keep))
     
     def __getitem__(self, n):
-        print(self.keep)
         if n not in self.keep:
             return None
         return chr(n)
@@ -15,4 +14,4 @@ class Keeper:
 
 if __name__ == "__main__":
     vowels = Keeper("aeiouy")
-    print(vowels("ok"))
+    print(vowels("you raise me up."))
