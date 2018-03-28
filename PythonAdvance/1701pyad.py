@@ -3,13 +3,16 @@
 class UpperMeta(type):
     def __new__(cls, name, bases, attrs):
         print("现在开始执行元类UpperMeta中的__new__")
+        print("cls: ", cls)
+        print("name: ", name)
+        print("bases: ", bases)
+        print("attrs: ", attrs)
         uppercase_attr = {}
         for name, value in attrs.items():
             if not name.startswith("__"):
                 uppercase_attr[name.upper()] = value
             else:
                 uppercase_attr[name] = value
-        print(uppercase_attr)
         #return type.__new__(cls, name, bases, uppercase_attr)
         return super(UpperMeta, cls).__new__(cls, name, bases, uppercase_attr)
 
